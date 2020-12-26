@@ -42,7 +42,7 @@ public class ArticleController {
 		ArrayList<String> imagesInFile = new ArrayList<String>();
 		try {
 			System.out.println(articleTitle);
-			BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIA5HDVJBCPVEFUZ6F3", "+MH+SuY4/fmq5JvjFvY6+MrN6EdIbZrLdcpYYk9b");
+			BasicAWSCredentials awsCreds = new BasicAWSCredentials("******", "******");
 			AmazonS3 s3Client = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(awsCreds)).withRegion("us-east-2").build();
 			S3Object object = s3Client.getObject(new GetObjectRequest("vasiblog", key));
 			InputStream objectData = object.getObjectContent();
