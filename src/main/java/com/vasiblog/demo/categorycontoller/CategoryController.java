@@ -30,7 +30,7 @@ public class CategoryController {
 		listOfArticles.clear();
 		listOfRecentArticles.clear();
 		String cat = categoryType + "/";
-		BasicAWSCredentials awsCreds = new BasicAWSCredentials("AKIA5HDVJBCPVEFUZ6F3", "+MH+SuY4/fmq5JvjFvY6+MrN6EdIbZrLdcpYYk9b");
+		BasicAWSCredentials awsCreds = new BasicAWSCredentials("****", "****");
 		AmazonS3 s3Client = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(awsCreds)).withRegion("us-east-2").build();        
 		ListObjectsV2Request req = new ListObjectsV2Request().withBucketName("vasiblog").withPrefix(cat).withDelimiter("^[a-zA-z0-9. ]*$");
 		ListObjectsV2Result result;
